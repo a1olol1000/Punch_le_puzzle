@@ -12,4 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f62904e4a2ab94e8b4c93e15169cde, type: 3}
   m_Name: Keybindings
   m_EditorClassIdentifier: 
-  keybindingCheck: []
+  keybindingCheck:
+  - keybindingActions: 0
+    keyCode: 32
+  - keybindingActions: 1
+    keyCode: 323
+  - keybindingActions: 2
+    keyCode: 119
+  - keybindingActions: 3
+    keyCode: 115
+  - keybindingActions: 4
+    keyCode: 97
+  - keybindingActions: 5
+    keyCode: 100
+  - keybindingActions: 6
+    keyCode: 306
+  - keybindingActions: 7
+    keyCode: 304
+  - keybindingActions: 8
+    keyCode: 324
