@@ -1,10 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class characterMover : MonoBehaviour
 {
+    
+    int framecurent=0;
+    Vector3 rotate;
+    Vector3 mousePosition1;
+    Vector3 mousePosition2;
+    [SerializeField]
+    float spinspeed = 1f;
     [SerializeField]
     float jumpForze = 100f;
     [SerializeField]
@@ -30,6 +38,11 @@ public class characterMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        framecurent ++;
+        if (framecurent>1)
+        {
+            framecurent = 0;
+        }
         if (inputManager.GetKeyDown(KeybindingActions.Jump))
         {
             riibody.AddForce(Vector3.up * jumpForze);
@@ -76,8 +89,24 @@ public class characterMover : MonoBehaviour
             horisontal = 0;
         }
         walk = walk + run;
-        Vector3 move = new Vector3(-vertical, horisontal, upp) * walk * Time.deltaTime;
+        Vector3 move = new Vector3(-vertical, horisontal, upp);
+        move.Normalize();
+        move = move * walk * Time.deltaTime;
         transform.Translate(move);
+        transform.Rotate(0,0,rotate.z*spinspeed*Time.deltaTime);
         
     }
+    private void OnMouseDrag() 
+    {
+        if (framecurent == 0)
+        {mousePosition1 = Input.mousePosition;}
+        if (framecurent == 1)
+        {mousePosition2 = Input.mousePosition;}
+        if (mousePosition1.x>mousePosition2.x)
+        {
+            rotate.z = rotate.z + mousePosition1.x - mousePosition2.x;
+
+        }
+    }
+
 }
