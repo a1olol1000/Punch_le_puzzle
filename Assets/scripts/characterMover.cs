@@ -117,7 +117,7 @@ public class characterMover : MonoBehaviour
             mosepotisionDelta= mouseSavePosition1 - mousePosition2;
             if (Input.GetAxis("Mouse X")>0)
             {
-                rotate.z = -mosepotisionDelta.x;
+                rotate.z = mosepotisionDelta.x;
             }
             else if (Input.GetAxis("Mouse X")<0)
             {
@@ -129,7 +129,7 @@ public class characterMover : MonoBehaviour
             }
             if (Input.GetAxis("Mouse Y")>0)
             {
-                rotate.y = mosepotisionDelta.y;
+                rotate.y = -mosepotisionDelta.y;
             }
             else if (Input.GetAxis("Mouse Y")<0)
             {

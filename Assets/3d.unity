@@ -329,7 +329,7 @@ MonoBehaviour:
   facecamera: {fileID: 1466247994}
   faceCamera: {fileID: 1466247993}
   spinspeed: 1.5
-  tiltspeed: 1
+  tiltspeed: 1.5
   jumpForze: 300
   walkSpeed: 7.5
   runSpeed: 10
