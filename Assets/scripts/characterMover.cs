@@ -8,16 +8,14 @@ using UnityEngine.UIElements;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
 
+
 public class characterMover : MonoBehaviour
 {
-    [SerializeField]
-    Transform facecamera;
+
     [SerializeField]
     GameObject faceCamera;
-    int xposm=0;
-    int yposm=0;
     int framecurent=0;
-    Vector3 mosepotisionDelta;
+    Vector2 mosepotisionDelta;
     Vector3 rotate;
     Vector3 mouseSavePosition1;
     Vector3 mousePosition2;
@@ -44,17 +42,16 @@ public class characterMover : MonoBehaviour
     }
     void Start()
     {
-        mousePosition2 = Input.mousePosition;
+        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         inputManager = inputManager.instance;
-        xposm = (int)mousePosition2.x;
-        yposm = (int)mousePosition2.y;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        int xPos = xposm, yPos = yposm;
-
+        mosepotisionDelta.x = Input.GetAxis("Mouse X")*spinspeed;
+        mosepotisionDelta.y = Input.GetAxis("Mouse Y")*tiltspeed;
         
         if (inputManager.GetKeyDown(KeybindingActions.Jump))
         {
@@ -106,44 +103,15 @@ public class characterMover : MonoBehaviour
         move.Normalize();
         move = move * walk * Time.deltaTime;
         transform.Translate(move);
-        transform.Rotate(0,0,rotate.z*spinspeed*Time.deltaTime);
-        faceCamera.transform.Rotate(rotate.y*tiltspeed*Time.deltaTime,0,0);
-        rotate.x = 0;
-        rotate.y=0;
-        rotate.z=0;
-        if (inputManager.GetKey(KeybindingActions.Interackt))
-        {
-            mouseSavePosition1 = Input.mousePosition;
-            mosepotisionDelta= mouseSavePosition1 - mousePosition2;
-            if (Input.GetAxis("Mouse X")>0)
-            {
-                rotate.z = mosepotisionDelta.x;
-            }
-            else if (Input.GetAxis("Mouse X")<0)
-            {
-                rotate.z = mosepotisionDelta.x;
-            }
-            else 
-            {
-                rotate.z = 0;
-            }
-            if (Input.GetAxis("Mouse Y")>0)
-            {
-                rotate.y = -mosepotisionDelta.y;
-            }
-            else if (Input.GetAxis("Mouse Y")<0)
-            {
-                rotate.y = -mosepotisionDelta.y;
-            }
-            else 
-            {
-                rotate.y = 0;
-            }
-            SetCursorPos(xPos,yPos);
-        }  
+        transform.Rotate(0,0,mosepotisionDelta.x);
+        faceCamera.transform.Rotate(-mosepotisionDelta.y,0,0);
+        
+         if (inputManager.GetKeyDown(KeybindingActions.SwitchCam))
+         {
+            
+         }
         
     }
-    [DllImport("user32.dll")]
-    static extern bool SetCursorPos(int X, int Y);
+
 
 }

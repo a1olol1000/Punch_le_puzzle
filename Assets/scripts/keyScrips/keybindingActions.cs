@@ -8,5 +8,6 @@ public enum KeybindingActions
         StrafeRight,
         Run,
         Crouch,
-        Raygrabing
+        Raygrabing,
+        SwitchCam
     }

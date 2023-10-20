@@ -31,3 +31,5 @@ MonoBehaviour:
     keyCode: 304
   - keybindingActions: 8
     keyCode: 324
+  - keybindingActions: 9
+    keyCode: 9
