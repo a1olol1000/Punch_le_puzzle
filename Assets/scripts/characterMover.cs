@@ -17,11 +17,7 @@ public class characterMover : MonoBehaviour
 
     [SerializeField]
     GameObject faceCamera;
-    int framecurent=0;
     Vector2 mosepotisionDelta;
-    Vector3 rotate;
-    Vector3 mouseSavePosition1;
-    Vector3 mousePosition2;
     [SerializeField]
     float spinspeed = 1f;
         [SerializeField]
@@ -108,12 +104,7 @@ public class characterMover : MonoBehaviour
         transform.Translate(move);
         transform.Rotate(0,0,mosepotisionDelta.x);
         faceCamera.transform.Rotate(-mosepotisionDelta.y,0,0);
-        
-        if (inputManager.GetKeyDown(KeybindingActions.SwitchCam))
-        {
-            CameraManager.instance.ManagerarCam();
-            
-        }
+    
         
         
     }

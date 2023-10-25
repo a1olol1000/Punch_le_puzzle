@@ -217,6 +217,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &267921344 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2569347124504585312, guid: 403215fb52e802040bc4e853002080ea, type: 3}
+  m_PrefabInstance: {fileID: 665977622}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &446924562
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,6 +430,29 @@ MonoBehaviour:
   _3rdPersonCamera: {fileID: 446924562}
   _1stPersonCamera: {fileID: 1466247993}
   maneChan: 1
+--- !u!136 &588682486
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588682471}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.005219941
+  m_Height: 0.031893194
+  m_Direction: 2
+  m_Center: {x: -0.00007613778, y: 2.9241298e-18, z: 0.015906462}
 --- !u!1001 &608645410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -433,6 +461,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: cd87f7ac9017b2447b74917ef3abe8eb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 11.297
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd87f7ac9017b2447b74917ef3abe8eb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 11.297
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd87f7ac9017b2447b74917ef3abe8eb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 11.297
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cd87f7ac9017b2447b74917ef3abe8eb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.7672253
@@ -545,6 +585,18 @@ PrefabInstance:
     - target: {fileID: 2946470385525472986, guid: 403215fb52e802040bc4e853002080ea, type: 3}
       propertyPath: m_Name
       value: doorframePrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049763733778213909, guid: 403215fb52e802040bc4e853002080ea, type: 3}
+      propertyPath: doorFrame
+      value: 
+      objectReference: {fileID: 267921344}
+    - target: {fileID: 4049763733778213909, guid: 403215fb52e802040bc4e853002080ea, type: 3}
+      propertyPath: slideDistanceX
+      value: -0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049763733778213909, guid: 403215fb52e802040bc4e853002080ea, type: 3}
+      propertyPath: slideDistanceY
+      value: 1.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -825,6 +877,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1f67297ded17f2b4986278476871d9de, type: 3}
       insertIndex: -1
       addedObject: {fileID: 588682483}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1f67297ded17f2b4986278476871d9de, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 588682486}
   m_SourcePrefab: {fileID: 100100000, guid: 1f67297ded17f2b4986278476871d9de, type: 3}
 --- !u!1001 &2760292287457415725
 PrefabInstance:

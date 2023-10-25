@@ -3,7 +3,9 @@ guid: db9a6ca2e061d374486222b26833d551
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _3rdPersonCamera: {instanceID: 0}
+  - _1stPersonCamera: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
