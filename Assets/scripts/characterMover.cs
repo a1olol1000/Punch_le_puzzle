@@ -7,6 +7,9 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
+using System.Data.Common;
+using Unity.Content;
+
 
 
 public class characterMover : MonoBehaviour
@@ -106,10 +109,12 @@ public class characterMover : MonoBehaviour
         transform.Rotate(0,0,mosepotisionDelta.x);
         faceCamera.transform.Rotate(-mosepotisionDelta.y,0,0);
         
-         if (inputManager.GetKeyDown(KeybindingActions.SwitchCam))
-         {
+        if (inputManager.GetKeyDown(KeybindingActions.SwitchCam))
+        {
+            CameraManager.instance.ManagerarCam();
             
-         }
+        }
+        
         
     }
 
