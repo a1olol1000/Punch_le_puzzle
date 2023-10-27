@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e8d0ffb1af285d549bab426f219f1d57, type: 3}
       propertyPath: m_LocalScale.x
-      value: 182.50029
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e8d0ffb1af285d549bab426f219f1d57, type: 3}
       propertyPath: m_LocalScale.y
-      value: 182.50029
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e8d0ffb1af285d549bab426f219f1d57, type: 3}
       propertyPath: m_LocalScale.z
-      value: 182.50029
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e8d0ffb1af285d549bab426f219f1d57, type: 3}
       propertyPath: m_LocalPosition.x
@@ -305,11 +305,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3fe7100743015b4c9cb91800fa5e694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorFrame: {fileID: 2569347124504585312}
   openAngle: 125
   openSpeed: 2
   slideDistanceX: -0.85
-  slideDistanceZ: 1.25
+  slideDistanceY: 1.25
   isOpen: 1
+  scale: {x: 0, y: 0, z: 0}
 --- !u!65 &2086463751398987081
 BoxCollider:
   m_ObjectHideFlags: 0

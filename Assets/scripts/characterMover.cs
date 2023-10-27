@@ -14,7 +14,8 @@ using Unity.Content;
 
 public class characterMover : MonoBehaviour
 {
-
+    [SerializeField]
+    GameObject elevator;
     [SerializeField]
     GameObject faceCamera;
     Vector2 mosepotisionDelta;
@@ -104,7 +105,7 @@ public class characterMover : MonoBehaviour
         transform.Translate(move);
         transform.Rotate(0,0,mosepotisionDelta.x);
         faceCamera.transform.Rotate(-mosepotisionDelta.y,0,0);
-    
+        
         
         
     }
