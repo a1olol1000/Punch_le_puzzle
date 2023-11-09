@@ -31,6 +31,7 @@ public class characterMover : MonoBehaviour
     float runSpeed = 10f;
     float run = 0f;
     private inputManager inputManager;
+    private BasicLogic basicLogic;
     Rigidbody riibody;
     float upp ;
     float horisontal;
@@ -44,7 +45,7 @@ public class characterMover : MonoBehaviour
     {
         UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         inputManager = inputManager.instance;
-
+        basicLogic = BasicLogic.instance;
     }
 
     // Update is called once per frame
@@ -105,9 +106,6 @@ public class characterMover : MonoBehaviour
         transform.Translate(move);
         transform.Rotate(0,0,mosepotisionDelta.x);
         faceCamera.transform.Rotate(-mosepotisionDelta.y,0,0);
-        
-        
-        
     }
 
 

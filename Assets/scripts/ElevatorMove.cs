@@ -8,7 +8,7 @@ public class ElevatorMove : MonoBehaviour
     public float maxHeight = 10.0f; // Set the maximum height the elevator can reach
     public float minHeight = 0f;
     public bool movingUp = true;
-    public static ElevatorMove instance;
+    
 
     void Update()
     {
