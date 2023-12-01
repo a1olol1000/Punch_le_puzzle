@@ -11,10 +11,9 @@ public class CameraManager : MonoBehaviour
     public GameObject _1stPersonCamera;
     private inputManager inpat;
     public int maneChan;
-    public static CameraManager instance;
-    private void Awake() 
+    private void Start() 
     {
-        inpat =inputManager.instance;    
+        inpat = inputManager.instance;    
     }
     private void Update() 
     {

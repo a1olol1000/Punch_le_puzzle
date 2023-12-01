@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3d94c44a51f547b4b8a4bf2ddf9f3623, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.87
+      value: -19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3d94c44a51f547b4b8a4bf2ddf9f3623, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.15
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3d94c44a51f547b4b8a4bf2ddf9f3623, type: 3}
       propertyPath: m_LocalPosition.z
@@ -51,6 +51,10 @@ PrefabInstance:
     - target: {fileID: -516098083770646512, guid: 3d94c44a51f547b4b8a4bf2ddf9f3623, type: 3}
       propertyPath: m_Name
       value: elevatorButoon
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: 3d94c44a51f547b4b8a4bf2ddf9f3623, type: 3}
+      propertyPath: m_TagString
+      value: button
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3d94c44a51f547b4b8a4bf2ddf9f3623, type: 3}
       propertyPath: m_Name
@@ -110,6 +114,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -516098083770646512, guid: 3d94c44a51f547b4b8a4bf2ddf9f3623, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7157668287175299797}
+    - targetCorrespondingSourceObject: {fileID: -516098083770646512, guid: 3d94c44a51f547b4b8a4bf2ddf9f3623, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8301964594231944815}
+    - targetCorrespondingSourceObject: {fileID: -516098083770646512, guid: 3d94c44a51f547b4b8a4bf2ddf9f3623, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1252539726390742780}
   m_SourcePrefab: {fileID: 100100000, guid: 3d94c44a51f547b4b8a4bf2ddf9f3623, type: 3}
 --- !u!1 &2515400859747045574 stripped
 GameObject:
@@ -137,6 +147,32 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0028289652, y: 0.0021838215, z: 0.05062368}
   m_Center: {x: -0.000022737979, y: 0.0062755444, z: 0.09931844}
+--- !u!114 &8301964594231944815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2515400859747045574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72969cb1d782a9a47839a23d7a9dc9ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activate: 0
+--- !u!114 &1252539726390742780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2515400859747045574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ec13440db581b4ea897bb98d4157e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activate: 0
 --- !u!1 &6268840901971619207 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3d94c44a51f547b4b8a4bf2ddf9f3623, type: 3}
@@ -389,7 +425,7 @@ MonoBehaviour:
   speed: 2
   maxHeight: 10
   minHeight: 0
-  movingUp: 0
+  movingUp: 1
 --- !u!65 &1156514140772423635
 BoxCollider:
   m_ObjectHideFlags: 0

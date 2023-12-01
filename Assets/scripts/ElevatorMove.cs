@@ -23,6 +23,10 @@ public class ElevatorMove : MonoBehaviour
         {
             transform.Translate(Vector3.down * speed * Time.deltaTime);
         }
+        if (elevatorButton.GetComponent<PressingController>().activateElevator)
+        {
+            ActivateElevator();
+        }
     }
     public void ActivateElevator()
     {

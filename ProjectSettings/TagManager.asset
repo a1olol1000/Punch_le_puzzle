@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Raycaster
+  - button
   layers:
   - Default
   - TransparentFX
@@ -12,7 +13,7 @@ TagManager:
   - Raycaster
   - Water
   - UI
-  - 
+  - button
   - 
   - 
   - 

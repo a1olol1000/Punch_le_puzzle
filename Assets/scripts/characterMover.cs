@@ -21,7 +21,7 @@ public class characterMover : MonoBehaviour
     Vector2 mosepotisionDelta;
     [SerializeField]
     float spinspeed = 1f;
-        [SerializeField]
+    [SerializeField]
     float tiltspeed = 10f;
     [SerializeField]
     float jumpForze = 100f;
@@ -106,6 +106,7 @@ public class characterMover : MonoBehaviour
         transform.Translate(move);
         transform.Rotate(0,0,mosepotisionDelta.x);
         faceCamera.transform.Rotate(-mosepotisionDelta.y,0,0);
+
     }
 
 
