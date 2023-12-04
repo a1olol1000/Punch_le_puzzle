@@ -9,6 +9,6 @@ public class TimedDelete : MonoBehaviour
     // Start is called before the first frame update
     private void Awake() 
     {
-        GameObject.Destroy(this,timeTillDie);
+        GameObject.Destroy(this.gameObject,timeTillDie);
     }
 }
