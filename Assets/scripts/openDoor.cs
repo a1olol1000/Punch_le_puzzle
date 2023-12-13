@@ -7,6 +7,8 @@ using UnityEngine.UIElements;
 public class openDoor : MonoBehaviour
 {
     [SerializeField]
+    GameObject open;
+    [SerializeField]
     Transform doorFrame;
     [SerializeField]
     public float openAngle = 90.0f; // The angle by which the door should open
@@ -20,20 +22,20 @@ public class openDoor : MonoBehaviour
     public bool isOpen = true;
     private Vector3 initialPosition;
     private Vector3 openPosition;
-    public Vector3 scale;
+    private Vector3 _scale;
     private Vector3 scaleFrame;
     private void Awake() 
     {
         scaleFrame = doorFrame.lossyScale;
-        scale = transform.localScale;
-        scale.x = scale.x * scaleFrame.x;
-        scale.y = scale.y * scaleFrame.y;
-        scale.z = scale.z * scaleFrame.z;
+        _scale = transform.localScale;
+        _scale.x = _scale.x * scaleFrame.x;
+        _scale.y = _scale.y * scaleFrame.y;
+        _scale.z = _scale.z * scaleFrame.z;
     }
     void Start()
     {
-        slideDistanceX = slideDistanceX * scale.x;
-        slideDistanceY = slideDistanceY * scale.y;
+        slideDistanceX = slideDistanceX * _scale.x;
+        slideDistanceY = slideDistanceY * _scale.y;
         initialPosition = transform.position;
         openPosition = transform.position + transform.forward * slideDistanceX; // Slide to the left
         openPosition = transform.position + transform.forward * slideDistanceY + transform.right * slideDistanceX; // Slide forward and to the right
@@ -56,6 +58,14 @@ public class openDoor : MonoBehaviour
 
             // Move the door back to its initial position
             transform.position = Vector3.Lerp(transform.position, initialPosition, Time.deltaTime * openSpeed);
+        }
+        if (open.GetComponent<Xor>().output||open.GetComponent<And>().output)
+        {
+            isOpen=true;
+        }
+        else if (!open.GetComponent<Xor>().output||!open.GetComponent<And>().output)
+        {
+            isOpen=false;
         }
     }
 

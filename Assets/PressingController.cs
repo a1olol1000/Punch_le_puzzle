@@ -6,7 +6,7 @@ public class PressingController : MonoBehaviour
 {
     [SerializeField]
     GameObject buttonpress;
-    public bool activateElevator;
+    public bool activateButton;
     private inputManager inputManager;
     private void Start() 
     {
@@ -21,17 +21,17 @@ public class PressingController : MonoBehaviour
         if (inputManager.GetKeyDown(KeybindingActions.Interackt))
         {
             print("press");
-            activateElevator = true;
+            activateButton = true;
             Instantiate(buttonpress);
         }
         else
         {
-            activateElevator = false;
+            activateButton = false;
         }
     }
     else
     {
-        activateElevator = false;
+        activateButton = false;
     }
     }
     
