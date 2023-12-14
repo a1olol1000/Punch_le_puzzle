@@ -59,14 +59,96 @@ public class openDoor : MonoBehaviour
             // Move the door back to its initial position
             transform.position = Vector3.Lerp(transform.position, initialPosition, Time.deltaTime * openSpeed);
         }
-        if (open.GetComponent<Xor>().output||open.GetComponent<And>().output)
+        // print("Open: " + open);
+        // print("Xor: " + open.GetComponent<Xor>());
+
+        if (open.TryGetComponent<Xor>(out Xor xorComponent))
         {
-            isOpen=true;
+            if (xorComponent.output)
+            {
+                isOpen = true;
+            }
+            else if (!xorComponent.output)
+            {
+                isOpen = false;
+            }
         }
-        else if (!open.GetComponent<Xor>().output||!open.GetComponent<And>().output)
+        else if (open.TryGetComponent<And>(out And andComponent))
         {
-            isOpen=false;
+            if (andComponent.output)
+            {
+                isOpen = true;   
+            }
+            else if (!andComponent.output)
+            {
+                isOpen = false;
+            }
         }
+        else if (open.TryGetComponent<Or>(out Or orComponent))
+        {
+            if (orComponent.output)
+            {
+                isOpen = true;
+            }
+            else if (!orComponent.output)
+            {
+                isOpen = false;
+            }
+        }
+        else if (open.TryGetComponent<Not>(out Not notComponent))
+        {
+            if (notComponent.output)
+            {
+                isOpen = true;
+            }
+            else if (!notComponent.output)
+            {
+                isOpen = false;
+            }
+        }
+        else if (open.TryGetComponent<Nor>(out Nor norComponent))
+        {
+            if (norComponent.output)
+            {
+                isOpen = true;
+            }
+            else if (!norComponent.output)
+            {
+                isOpen = false;
+            }
+        }
+        else if (open.TryGetComponent<Nand>(out Nand nandComponent))
+        {
+            if (nandComponent.output)
+            {
+                isOpen = true;
+            }
+            else if (!nandComponent.output)
+            {
+                isOpen = false;
+            }
+        }
+        else if (open.TryGetComponent<Xnor>(out Xnor xnorComponent))
+        {
+            if (xnorComponent.output)
+            {
+                isOpen = true;
+            }
+            else if (!xnorComponent.output)
+            {
+                isOpen = false;
+            }
+        }
+        else
+        {
+            print("connect input");
+        }
+
+        
+
+
+
+        
     }
 
     // You can add a method to toggle the door open/close
