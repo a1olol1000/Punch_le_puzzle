@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3fe7100743015b4c9cb91800fa5e694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  open: {fileID: 0}
+  open: {fileID: 7990956378909749604}
   doorFrame: {fileID: 2569347124504585312}
   openAngle: 125
   openSpeed: 2

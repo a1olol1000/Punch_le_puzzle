@@ -14,22 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keybindingCheck:
   - keybindingActions: 0
-    keyCode: 32
+    keyCode: 104
   - keybindingActions: 1
-    keyCode: 323
+    keyCode: 101
   - keybindingActions: 2
-    keyCode: 119
+    keyCode: 105
   - keybindingActions: 3
-    keyCode: 115
+    keyCode: 107
   - keybindingActions: 4
-    keyCode: 97
+    keyCode: 106
   - keybindingActions: 5
-    keyCode: 100
+    keyCode: 108
   - keybindingActions: 6
-    keyCode: 306
+    keyCode: 110
   - keybindingActions: 7
-    keyCode: 304
+    keyCode: 112
   - keybindingActions: 8
-    keyCode: 324
+    keyCode: 113
   - keybindingActions: 9
     keyCode: 9

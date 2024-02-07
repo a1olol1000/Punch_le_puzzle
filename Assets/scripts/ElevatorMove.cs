@@ -4,8 +4,8 @@ public class ElevatorMove : MonoBehaviour
 {
     [SerializeField]
     GameObject elevatorButton;
-    public float speed = 2.0f; // Adjust the speed as needed
-    public float maxHeight = 10.0f; // Set the maximum height the elevator can reach
+    public float speed = 2.0f; //fart
+    public float maxHeight = 10.0f; //maxhöjd
     public float minHeight = 0f;
     public bool movingUp = true;
     
